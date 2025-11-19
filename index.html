@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Quarterly Earnings — Reveal.js</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/league.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
+
+  <style>
+    .email { font-size: 0.9rem; opacity: 0.85; }
+    pre code { white-space: pre-wrap; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h1>Q3 Quarterly Earnings</h1>
+        <h3>Financial Institution — Technical Summary</h3>
+        <p class="email">Contact: 23f3001804@ds.study.iitm.ac.in</p>
+        <aside class="notes">Intro notes for speaker.</aside>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+## Highlights — Q3
+
+- Revenue grew **6.2%**
+- NIM improved **12 bps**
+- Digital services revenue increased
+
+*Markdown slide example.*
+        </script>
+      </section>
+
+      <section>
+        <h2>Key Drivers</h2>
+        <ul>
+          <li class="fragment">SME loan growth</li>
+          <li class="fragment">Wealth management fees</li>
+          <li class="fragment">Cost efficiency</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>NPV Calculation (Python)</h2>
+        <pre><code class="language-python">
+def npv(cashflows, r):
+    total = 0
+    for t, cf in enumerate(cashflows):
+        total += cf / ((1+r)**t)
+    return total
+        </code></pre>
+      </section>
+
+      <section>
+        <h2>Financial Formula</h2>
+        <p>$$NPV = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t}$$</p>
+      </section>
+
+    </div>
+  </div>
+
+  <script type="module">
+    import Reveal from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.esm.js';
+    import Markdown from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.esm.js';
+    import Highlight from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.esm.js';
+    import Notes from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.esm.js';
+    import Math from 'https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.esm.js';
+
+    Reveal.initialize({
+      hash: true,
+      plugins: [Markdown, Highlight, Notes, Math],
+      math: { mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' },
+      slideNumber: true
+    });
+  </script>
+</body>
+</html>
