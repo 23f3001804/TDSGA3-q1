@@ -8,35 +8,34 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/league.css" id="theme">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css">
-
-  <style>
-    .email { font-size: 0.9rem; opacity: 0.85; }
-    pre code { white-space: pre-wrap; word-break: break-word; }
-  </style>
 </head>
 <body>
   <div class="reveal">
     <div class="slides">
 
+      <!-- Title slide -->
       <section>
         <h1>Q3 Quarterly Earnings</h1>
         <h3>Financial Institution — Technical Summary</h3>
-        <p class="email">Contact: 23f3001804@ds.study.iitm.ac.in</p>
-        <aside class="notes">Intro notes for speaker.</aside>
+        <p>Contact: 23f3001804@ds.study.iitm.ac.in</p>
       </section>
 
+      <!-- Markdown slide (email included!) -->
       <section data-markdown>
         <script type="text/template">
-## Highlights — Q3
+## Quarterly Highlights (Markdown Slide)
 
 - Revenue grew **6.2%**
 - NIM improved **12 bps**
 - Digital services revenue increased
 
-*Markdown slide example.*
+**Email:** 23f3001804@ds.study.iitm.ac.in  
+*(Required for evaluation)*
+
         </script>
       </section>
 
+      <!-- Fragments -->
       <section>
         <h2>Key Drivers</h2>
         <ul>
@@ -46,6 +45,7 @@
         </ul>
       </section>
 
+      <!-- Code sample -->
       <section>
         <h2>NPV Calculation (Python)</h2>
         <pre><code class="language-python">
@@ -57,6 +57,7 @@ def npv(cashflows, r):
         </code></pre>
       </section>
 
+      <!-- Math -->
       <section>
         <h2>Financial Formula</h2>
         <p>$$NPV = \sum_{t=0}^{T} \frac{C_t}{(1+r)^t}$$</p>
@@ -75,9 +76,9 @@ def npv(cashflows, r):
     Reveal.initialize({
       hash: true,
       plugins: [Markdown, Highlight, Notes, Math],
-      math: { mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' },
-      slideNumber: true
+      math: { mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js' }
     });
   </script>
+
 </body>
 </html>
