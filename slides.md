@@ -46,7 +46,7 @@ Modern, version-controlled documentation using **Marp**.
 ---
 
 <!-- Background image slide -->
-![bg cover](images/download.png)
+![bg cover](youtube.png)
 
 # System Overview  
 Documentation with background image.
